@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "posts/01-10-2024-welcome-to-my-mental-mosaic/index.html",
-    "href": "posts/01-10-2024-welcome-to-my-mental-mosaic/index.html",
-    "title": "Welcome to my Mental Mosaic",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Mental Mosaic",
     "section": "",
-    "text": "In the past year or so, I have become very interested in machine learning and its applications. This led me to self-learn it alongside my bachelor’s degree in computer science. I had heard about “learning in public” and sharing what you learn with others before I began this journey, but I thought to myself, “This seems like a lot of trouble.”\nFast forward seven months, and I regret not creating a blog and posting things online.\n\nWhat This Blog Will Contain\nSince this is a technical blog, I won’t be writing about my activities outside of my professional career. The blog will contain posts about machine learning, things I’ve learned, fun projects I’ve worked on, tools I find interesting, and quirky observations about our cool planet—you get the idea.\nMy goal is to write posts about anything interesting I come across, reflections after a talk or conference, and maybe more.\n\n\nThoughts\nAs a beginner writer who’s just starting to take steps into learning in public, I will prioritize this effort by committing to writing at least one post per month.\nLet the fun begin!"
+    "text": "Welcome to my Mental Mosaic\n\n\n\n\n\n\nBlog\n\n\n\nA brief summary of what kind of stuff will be written in this blog.\n\n\n\n\n\nOct 1, 2024\n\n\nAmine Hochlef\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -14,10 +14,10 @@
     "text": "Bio\nCurrently enrolled in university, pursuing a bachelor degree in computer science with a keen focus on machine learning.\nOn this site I keep a technical blog, a list of my projects (to be done), presentations(to be done) and my resume.\n\n\nNow\nCurrently, I am:\n\nSelf learning ML and doing projects\nStudying computer science at uni\nSeeking a collaborative team project in ML. Please reach out\n\nLast Updated : 27/09/2024"
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Mental Mosaic",
+    "objectID": "posts/01-10-2024-welcome-to-my-mental-mosaic/index.html",
+    "href": "posts/01-10-2024-welcome-to-my-mental-mosaic/index.html",
+    "title": "Welcome to my Mental Mosaic",
     "section": "",
-    "text": "Welcome to my Mental Mosaic\n\n\n\n\n\n\nBlog\n\n\n\nA brief summary of what kind of stuff will be written in this blog.\n\n\n\n\n\nOct 1, 2024\n\n\nAmine Hochlef\n\n\n\n\n\n\nNo matching items"
+    "text": "In the past year or so, I have become very interested in machine learning and its applications. This led me to self-learn it alongside my bachelor’s degree in computer science. I had heard about “learning in public” and sharing what you learn with others before I began this journey, but I thought to myself, “This seems like a lot of trouble.”\nFast forward seven months, and I regret not creating a blog and posting things online.\n\nWhat This Blog Will Contain\nSince this is a technical blog, I won’t be writing about my activities outside of my professional career. The blog will contain posts about machine learning, things I’ve learned, fun projects I’ve worked on, tools I find interesting, and quirky observations about our cool planet—you get the idea.\nMy goal is to write posts about anything interesting I come across, reflections after a talk or conference, and maybe more.\n\n\nThoughts\nAs a beginner writer who’s just starting to take steps into learning in public, I will prioritize this effort by committing to writing at least one post per month.\nLet the fun begin!"
   }
 ]
