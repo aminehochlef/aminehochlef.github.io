@@ -9,10 +9,6 @@ about:
   image-alt: "Tay"
   image-title: "Tay"
   links:
-    - icon: twitter-x
-      text: Twitter
-      href: https://x.com/AmineHochlef22
-      target: _blank
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/aminehochlef/
@@ -30,6 +26,9 @@ about:
       href: "mailto:amin.hochlef@gmail.com"
     - text: Blog
       href: blog.qmd
+    - icon: card-list
+      text: Resume
+      href: assets/amine_hochlef_resume.pdf
 ---
 
 # Bio
