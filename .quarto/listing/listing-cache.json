@@ -2,6 +2,9 @@
   "listingMap": {
     "blog.qmd": [
       "posts/**/*.qmd"
+    ],
+    "non-technical-blog.qmd": [
+      "non-tech-posts/**/*.qmd"
     ]
   }
 }

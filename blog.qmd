@@ -1,6 +1,5 @@
 ---
-title: "Mental Mosaic"
-description: "Data Meets Narrative"
+title: "Writings"
 listing:
   feed: 
       items: 5 

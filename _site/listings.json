@@ -4,5 +4,11 @@
     "items": [
       "/posts/01-10-2024-welcome-to-my-mental-mosaic/index.html"
     ]
+  },
+  {
+    "listing": "/non-technical-blog.html",
+    "items": [
+      "/non-tech-posts/01-02-2025-reflections-on-2024/index.html"
+    ]
   }
 ]

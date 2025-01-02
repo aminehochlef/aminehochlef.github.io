@@ -1,0 +1,18 @@
+---
+title: "My not so technical Writing"
+description: "It's exhausting to only write about technical stuff on the internet, so this blog will have some of my personal experiences outside of tech."
+listing:
+  feed: 
+      items: 5 
+      type: full
+      language: en 
+  contents: non-tech-posts/**/*.qmd
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
+feed: true
+---

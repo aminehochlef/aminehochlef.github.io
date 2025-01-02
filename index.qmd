@@ -9,6 +9,9 @@ about:
   image-alt: "Tay"
   image-title: "Tay"
   links:
+    - text: Bluesky
+      href: https://bsky.app/profile/hochlef.bsky.social
+      target: _blank
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/aminehochlef/
@@ -35,14 +38,13 @@ about:
 
 Currently enrolled in university, pursuing a bachelor degree in computer science with a keen focus on machine learning.
 
-On this site I keep a [technical blog](blog.qmd), a list of my projects (to be done), presentations(to be done) and my resume.
+On this site I keep a [technical blog](blog.qmd), [a non-technical blog](non-technical-blog.qmd), a list of my projects (to be done), presentations(to be done) and my resume.
 
 # Now
 
 Currently, I am:
 
 * Self learning ML and doing projects
-* Studying computer science at uni
-* Seeking a collaborative team project in ML. Please reach out
+* Doing internships
 
-Last Updated : **27/09/2024**
+Last Updated : **01/02/2025**

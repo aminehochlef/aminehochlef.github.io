@@ -9,23 +9,26 @@ execute:
 website:
   title: "Amine Hochlef"
   site-url: https://www.aminehochlef.github.io
-  description: "The legendry blog of Amine Hochlef"
+  description: "Amine Hochlef's humble writings"
   # margin-header: subscribe.html
   page-navigation: false
   navbar:
     right:
-      - text: "Home"
+      - text: "About"
         href: index.qmd
-      - text: "Blog"
+      - text: "Tech blog"
         href: blog.qmd
+      - text: "Non-Tech"
+        href: non-technical-blog.qmd
       - icon: rss
         href: blog.xml
     toggle-position: right
   page-footer: 
       left: "Copyright 2024, Amine Hochlef" 
-  back-to-top-navigation: false
+  back-to-top-navigation: true
 format:
   html:
+    page-layout: full
     allow-html: true
     theme: sandstone
     css: 
