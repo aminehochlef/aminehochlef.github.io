@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.aminehochlef.github.io/blog.html</loc>
-    <lastmod>2024-10-18T09:41:53.865Z</lastmod>
-  </url>
-  <url>
     <loc>https://www.aminehochlef.github.io/index.html</loc>
-    <lastmod>2024-10-18T09:41:53.865Z</lastmod>
+    <lastmod>2025-01-02T14:52:43.986Z</lastmod>
   </url>
   <url>
     <loc>https://www.aminehochlef.github.io/posts/01-10-2024-welcome-to-my-mental-mosaic/index.html</loc>
-    <lastmod>2024-10-18T09:41:53.865Z</lastmod>
+    <lastmod>2025-01-02T14:52:43.987Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aminehochlef.github.io/blog.html</loc>
+    <lastmod>2025-01-02T14:52:43.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aminehochlef.github.io/non-tech-posts/01-02-2025-reflections-on-2024/index.html</loc>
+    <lastmod>2025-01-02T14:52:43.987Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aminehochlef.github.io/non-technical-blog.html</loc>
+    <lastmod>2025-01-02T14:52:43.987Z</lastmod>
   </url>
 </urlset>

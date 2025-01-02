@@ -8,9 +8,9 @@
 <title>Amine Hochlef</title>
 <link>https://www.aminehochlef.github.io/blog.html</link>
 <atom:link href="https://www.aminehochlef.github.io/blog.xml" rel="self" type="application/rss+xml"/>
-<description>Data Meets Narrative</description>
+<description>Amine Hochlef&#39;s humble writings</description>
 <language>en</language>
-<generator>quarto-1.5.57</generator>
+<generator>quarto-1.6.39</generator>
 <lastBuildDate>Tue, 01 Oct 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Welcome to my Mental Mosaic</title>
@@ -37,7 +37,7 @@
 
 </section>
 
- ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>Blog</category>
   <guid>https://www.aminehochlef.github.io/posts/01-10-2024-welcome-to-my-mental-mosaic/</guid>
   <pubDate>Tue, 01 Oct 2024 00:00:00 GMT</pubDate>
