@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.aminehochlef.github.io/posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html</loc>
+    <lastmod>2025-01-06T07:57:16.178Z</lastmod>
+  </url>
+  <url>
     <loc>https://www.aminehochlef.github.io/posts/01-10-2024-welcome-to-my-mental-mosaic/index.html</loc>
     <lastmod>2025-01-02T12:03:45.841Z</lastmod>
   </url>
@@ -10,14 +14,18 @@
   </url>
   <url>
     <loc>https://www.aminehochlef.github.io/blog.html</loc>
-    <lastmod>2025-01-02T14:07:01.011Z</lastmod>
+    <lastmod>2025-01-06T07:52:04.854Z</lastmod>
   </url>
   <url>
     <loc>https://www.aminehochlef.github.io/index.html</loc>
-    <lastmod>2025-01-02T14:41:21.910Z</lastmod>
+    <lastmod>2025-01-06T07:28:26.167Z</lastmod>
   </url>
   <url>
     <loc>https://www.aminehochlef.github.io/non-technical-blog.html</loc>
     <lastmod>2025-01-02T11:23:19.434Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aminehochlef.github.io/posts/06-01-2025-notes-from-datacamp-course-intermediate-git/working_with_branches.html</loc>
+    <lastmod>2025-01-06T07:45:58.599Z</lastmod>
   </url>
 </urlset>

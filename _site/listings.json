@@ -2,6 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html",
+      "/posts/06-01-2025-notes-from-datacamp-course-intermediate-git/working_with_branches.html",
       "/posts/01-10-2024-welcome-to-my-mental-mosaic/index.html"
     ]
   },

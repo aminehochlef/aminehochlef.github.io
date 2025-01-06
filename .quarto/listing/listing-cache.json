@@ -1,7 +1,7 @@
 {
   "listingMap": {
     "blog.qmd": [
-      "posts/**/*.qmd"
+      "posts/**/*.{qmd,ipynb}"
     ],
     "non-technical-blog.qmd": [
       "non-tech-posts/**/*.qmd"

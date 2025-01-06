@@ -28,5 +28,11 @@
   },
   "non-tech-posts/01-02-2025-reflections-on-2024/index.qmd": {
     "index.html": "565c95c5"
+  },
+  "posts/06-01-2025-notes-from-datacamp-course-intermediate-git/working_with_branches.ipynb": {
+    "working_with_branches.html": "6c02a3b9"
+  },
+  "posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.ipynb": {
+    "collaborating_with_git.html": "19c2eae4"
   }
 }

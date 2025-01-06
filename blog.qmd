@@ -5,7 +5,8 @@ listing:
       items: 5 
       type: full
       language: en 
-  contents: posts/**/*.qmd
+  contents:
+  - "posts/**/*.{qmd,ipynb}"
   sort: "date desc"
   type: default
   categories: true

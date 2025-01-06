@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Amine Hochlef">
+<meta name="dcterms.date" content="2025-01-06">
+<meta name="description" content="My personal notes on the course Git Intermediate by DataCamp">
 
-<title>Writings – Amine Hochlef</title>
+<title>DataCamp : Git Intermediate course notes [Working with branches] – Amine Hochlef</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +23,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c297187fd303350852b3879ff9630217.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c297187fd303350852b3879ff9630217.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +103,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Amine Hochlef" href="blog.xml" data-external="1"></head>
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Amine Hochlef</span>
     </a>
   </div>
@@ -149,19 +126,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Tech blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./non-technical-blog.html"> 
+    <a class="nav-link" href="../../non-technical-blog.html"> 
 <span class="menu-text">Non-Tech</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./blog.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../blog.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -173,156 +150,112 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">DataCamp : Git Intermediate course notes [Working with branches]</h1>
+                  <div>
+        <div class="description">
+          My personal notes on the course Git Intermediate by DataCamp
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">course</div>
+                <div class="quarto-category">notes</div>
+                <div class="quarto-category">git</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Amine Hochlef </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 6, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QmxvZw==">Blog <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y291cnNl">course <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Z2l0">git <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bm90ZXM=">notes <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-to-branches" id="toc-introduction-to-branches" class="nav-link active" data-scroll-target="#introduction-to-branches">Introduction to branches</a></li>
+  <li><a href="#modifying-and-comparing-branches" id="toc-modifying-and-comparing-branches" class="nav-link" data-scroll-target="#modifying-and-comparing-branches">Modifying and comparing branches</a></li>
+  <li><a href="#merging-branches" id="toc-merging-branches" class="nav-link" data-scroll-target="#merging-branches">Merging branches</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Writings</h1>
-</div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
 
+<section id="introduction-to-branches" class="level1">
+<h1>Introduction to branches</h1>
+<p>A branch is like a parallel universe of the git repo, by default the default branch of a git repo is main, if we create a new branch by doing :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch example-branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>the new <code>example-branch</code> could have it’s own files and its own versions of files that are present in main, it’s really like a parallel universe!</p>
+<p>Branches are useful when we want to add a new feature or to fix a bug, that way we create a branch called bug-fix (in the example of fixing a bug), and work on the project simultaneously without affecting the main project (we are branching-off), even if we have problems in our current project that won’t affect the live project because it’s getting served by the main branch.</p>
+<p>We could switch between branches using :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch example-branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We could also create and switch to a new branch at the same time :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">-c</span> example-branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To check our branches :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When we are okay with the result in the branch, now it’s time to merge back into the main branch, this is presented in this simple illustration :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="git-branches.png" class="img-fluid figure-img"></p>
+<figcaption>Git branches</figcaption>
+</figure>
+</div>
+</section>
+<section id="modifying-and-comparing-branches" class="level1">
+<h1>Modifying and comparing branches</h1>
+<p>To compare two branches, like we compare two commits, or to compare file (staged or unstaged) to the latest commit etc … :</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff main example-branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If we get into the trouble of confusing branch names, we need to resolve the issue by renaming the branches by a more clear name :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-m</span> old-branch-name new-branch-name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>It’s good practice to delete the branch after finishing with it and merging with the main branch to do this we execute the following command :</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> example-branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If <code>example-branch</code> hasn’t been merged to <code>main</code> and we did the last command we will get an error, if we want to force the deletion :</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-D</span> example-branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="merging-branches" class="level1">
+<h1>Merging branches</h1>
+<p>When merging branches the branch that we want to merge from (the one with the new feature) is called the <code>source</code> branch, and the branch that we want to merge into is called the <code>destination</code> branch, the last commits from each branch are called the <code>parent commits</code>, if we want to merge <code>example-branch</code> into <code>main</code> we need first to switch to the main branch :</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>and then merge :</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge example-branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If we want to merge the two branches without switching to main we can do so using this command :</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge source destination</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge example-branch main </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note : the source being the first branch (order is important)</p>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Y291cnNlJTJDbm90ZXMlMkNnaXQ=" data-listing-date-sort="1736118000000" data-listing-file-modified-sort="1736150236178" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="444">
-<div class="thumbnail">
-<p><a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html" class="no-external"></a></p><a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html" class="no-external">
-<p><img loading="lazy" src="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/course_complete_git.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html" class="no-external">DataCamp : Git Intermediate course notes [Collaborating with git]</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Y291cnNl'); return false;">
-course
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZXM='); return false;">
-notes
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Z2l0'); return false;">
-git
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html" class="no-external">My personal notes on the course Git Intermediate by DataCamp</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html" class="no-external">
-<div class="listing-date">
-Jan 6, 2025
-</div>
-<div class="listing-author">
-Amine Hochlef
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Y291cnNlJTJDbm90ZXMlMkNnaXQ=" data-listing-date-sort="1736118000000" data-listing-file-modified-sort="1736149558599" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="414">
-<div class="thumbnail">
-<p><a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git/working_with_branches.html" class="no-external"></a></p><a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git/working_with_branches.html" class="no-external">
-<p><img loading="lazy" src="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git/course_complete_git.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git/working_with_branches.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git/working_with_branches.html" class="no-external">DataCamp : Git Intermediate course notes [Working with branches]</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git/working_with_branches.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Y291cnNl'); return false;">
-course
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZXM='); return false;">
-notes
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Z2l0'); return false;">
-git
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git/working_with_branches.html" class="no-external">My personal notes on the course Git Intermediate by DataCamp</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/06-01-2025-notes-from-datacamp-course-intermediate-git/working_with_branches.html" class="no-external">
-<div class="listing-date">
-Jan 6, 2025
-</div>
-<div class="listing-author">
-Amine Hochlef
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="QmxvZw==" data-listing-date-sort="1727733600000" data-listing-file-modified-sort="1735819425841" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="174">
-<div class="thumbnail">
-<p><a href="./posts/01-10-2024-welcome-to-my-mental-mosaic/index.html" class="no-external"></a></p><a href="./posts/01-10-2024-welcome-to-my-mental-mosaic/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/01-10-2024-welcome-to-my-mental-mosaic/utopia.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/01-10-2024-welcome-to-my-mental-mosaic/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/01-10-2024-welcome-to-my-mental-mosaic/index.html" class="no-external">Welcome to my Mental Mosaic</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/01-10-2024-welcome-to-my-mental-mosaic/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('QmxvZw=='); return false;">
-Blog
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/01-10-2024-welcome-to-my-mental-mosaic/index.html" class="no-external">A brief summary of what kind of stuff will be written in this blog.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/01-10-2024-welcome-to-my-mental-mosaic/index.html" class="no-external">
-<div class="listing-date">
-Oct 1, 2024
-</div>
-<div class="listing-author">
-Amine Hochlef
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
