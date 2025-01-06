@@ -10,7 +10,7 @@
 <atom:link href="https://www.aminehochlef.github.io/non-technical-blog.xml" rel="self" type="application/rss+xml"/>
 <description>It&#39;s exhausting to only write about technical stuff on the internet, so this blog will have some of my personal experiences outside of tech.</description>
 <language>en</language>
-<generator>quarto-1.6.39</generator>
+<generator>quarto-1.6.40</generator>
 <lastBuildDate>Thu, 02 Jan 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Reflections on 2024</title>

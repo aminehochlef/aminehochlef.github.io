@@ -7,6 +7,20 @@
     "text": "Bio\nCurrently enrolled in university, pursuing a bachelor degree in computer science with a keen focus on machine learning.\nOn this site I keep a technical blog, a non-technical blog, a list of my projects (to be done), presentations(to be done) and my resume.\n\n\nNow\nCurrently, I am:\n\nSelf learning ML and doing projects\nDoing internships\n\nLast Updated : 01/02/2025\n\n\n\n Back to top"
   },
   {
+    "objectID": "posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html",
+    "href": "posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html",
+    "title": "DataCamp : Git Intermediate course notes [Collaborating with git]",
+    "section": "",
+    "text": "When merging two branches it’s not very incommon to have conflicts, a conflict means two branches getting merged have two different versions of a file for example and git doesn’t know which one to keep.\nTherefore when we get a conflict we need to fix it in order to merge properly, but how is that?\nWhen git generates a conflict, it writes “special characters” in the content of file to specify the problem, to resolve the conflict we remove the special syntax, and keep the changes made by the feature branch if we want to keep it, save the modified file, add it to the staging area, commit it, and then try mergin again."
+  },
+  {
+    "objectID": "posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html#cloning-repos",
+    "href": "posts/06-01-2025-notes-from-datacamp-course-intermediate-git-part-two/collaborating_with_git.html#cloning-repos",
+    "title": "DataCamp : Git Intermediate course notes [Collaborating with git]",
+    "section": "Cloning repos",
+    "text": "Cloning repos\n\nCloning local repos\ngit clone path/to/project\nWe can also give it a name like this :\ngit clone path/to/project new_repo_name\n\n\nCloning remote repos\ngit clone URL_of_repo\nWhen cloning remote repos git remembers where the original was, we can list all remotes associated with the repo like this :\ngit remote\nor if we want to the result to be more detailed or “verbose”:\ngit remote -v\nBy default git will name the remote repo origin, we can name the remote ourselves by using this command :\ngit remote add &lt;name of remote repo&gt; URL\nExample :\ngit remote add hmed https://github.com/hmed/repo"
+  },
+  {
     "objectID": "posts/01-10-2024-welcome-to-my-mental-mosaic/index.html",
     "href": "posts/01-10-2024-welcome-to-my-mental-mosaic/index.html",
     "title": "Welcome to my Mental Mosaic",
@@ -18,7 +32,7 @@
     "href": "blog.html",
     "title": "Writings",
     "section": "",
-    "text": "Welcome to my Mental Mosaic\n\n\n\n\n\n\nBlog\n\n\n\nA brief summary of what kind of stuff will be written in this blog.\n\n\n\n\n\nOct 1, 2024\n\n\nAmine Hochlef\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "DataCamp : Git Intermediate course notes [Collaborating with git]\n\n\n\n\n\n\ncourse\n\n\nnotes\n\n\ngit\n\n\n\nMy personal notes on the course Git Intermediate by DataCamp\n\n\n\n\n\nJan 6, 2025\n\n\nAmine Hochlef\n\n\n\n\n\n\n\n\n\n\n\n\nDataCamp : Git Intermediate course notes [Working with branches]\n\n\n\n\n\n\ncourse\n\n\nnotes\n\n\ngit\n\n\n\nMy personal notes on the course Git Intermediate by DataCamp\n\n\n\n\n\nJan 6, 2025\n\n\nAmine Hochlef\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to my Mental Mosaic\n\n\n\n\n\n\nBlog\n\n\n\nA brief summary of what kind of stuff will be written in this blog.\n\n\n\n\n\nOct 1, 2024\n\n\nAmine Hochlef\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "non-tech-posts/01-02-2025-reflections-on-2024/index.html",
@@ -26,6 +40,13 @@
     "title": "Reflections on 2024",
     "section": "",
     "text": "I have made a promise to myself in October 2024 to post at least once a month on the blog but I didn’t keep that promise, turns out one of the coolest characters in tv shows have blogs (Sherlock Holmes from Sherlock, Barney Stinson from How I met your Mother etc…), so what am I doing not writing in my blog?\nI’m late but it’s my blog I can do whatever I want.\nAs I’m writing this, I wrote 2024 all over, I guess this problem of missing the date at the start of the year will haunt me till I’m dead.\n\nGoal setting\nI didn’t achieve most of my goals the year of 2024, I reckon it’s one of these two reasons :\n\nToo many goals in mind\nMost of my goals in 2024, were sabotaged beacuase of my studies\n\n\n\nWhat did I achieve\nI made some very good habits that I stuck to the whole year, like working out and ditched some bad habits like mindless media consumption as well as other ones.\nI learned many skills on the technical aspect.\n\n\n2025 Mindset\nNow that I’m conscious about consumption, this year I will create more than I consume.\n\nCreation is the bold act of adding to the world what is uniquely yours; consumption is merely borrowing the fruits of others’ courage. - Someone\n\n\n\n2025 is different\nIn opposition to 2024, this year I have some sense of accountability, this post will be rendered to the internet and will be forver there, if some of you folks reading this (I don’t think anyone will) and see that I haven’t achieved my goals at the end of the year, email me “Loser” my email is available at the about page.\n\n\nConclusion\n2025 is doing what I’ve planning but never did in 2024, I have no excuses now that I have completed my bachelor degree, and I have nothing that’s taking my time, I can just focus on learning and creating fun stuff now.\n\n\nFinal Notes\nI have noticed that when, I’m writing here I’m not sharing too much stuff (or sharing but not in details), maybe I’m still a newbie on the internet and I will open up as the time goes on, I mean its not like someone will read this crap.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "posts/06-01-2025-notes-from-datacamp-course-intermediate-git/working_with_branches.html",
+    "href": "posts/06-01-2025-notes-from-datacamp-course-intermediate-git/working_with_branches.html",
+    "title": "DataCamp : Git Intermediate course notes [Working with branches]",
+    "section": "",
+    "text": "Introduction to branches\nA branch is like a parallel universe of the git repo, by default the default branch of a git repo is main, if we create a new branch by doing :\ngit branch example-branch\nthe new example-branch could have it’s own files and its own versions of files that are present in main, it’s really like a parallel universe!\nBranches are useful when we want to add a new feature or to fix a bug, that way we create a branch called bug-fix (in the example of fixing a bug), and work on the project simultaneously without affecting the main project (we are branching-off), even if we have problems in our current project that won’t affect the live project because it’s getting served by the main branch.\nWe could switch between branches using :\ngit switch example-branch\nWe could also create and switch to a new branch at the same time :\ngit switch -c example-branch\nTo check our branches :\ngit branch\nWhen we are okay with the result in the branch, now it’s time to merge back into the main branch, this is presented in this simple illustration :\n\n\n\nGit branches\n\n\n\n\nModifying and comparing branches\nTo compare two branches, like we compare two commits, or to compare file (staged or unstaged) to the latest commit etc … :\ngit diff main example-branch\nIf we get into the trouble of confusing branch names, we need to resolve the issue by renaming the branches by a more clear name :\ngit branch -m old-branch-name new-branch-name\nIt’s good practice to delete the branch after finishing with it and merging with the main branch to do this we execute the following command :\ngit branch -d example-branch\nIf example-branch hasn’t been merged to main and we did the last command we will get an error, if we want to force the deletion :\ngit branch -D example-branch\n\n\nMerging branches\nWhen merging branches the branch that we want to merge from (the one with the new feature) is called the source branch, and the branch that we want to merge into is called the destination branch, the last commits from each branch are called the parent commits, if we want to merge example-branch into main we need first to switch to the main branch :\ngit switch main\nand then merge :\ngit merge example-branch\nIf we want to merge the two branches without switching to main we can do so using this command :\ngit merge source destination\n\ngit merge example-branch main \nNote : the source being the first branch (order is important)\n\n\n\n\n Back to top"
   },
   {
     "objectID": "non-technical-blog.html",
